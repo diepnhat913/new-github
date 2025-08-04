@@ -1,0 +1,135 @@
+import os
+import asyncio
+import discord
+
+os.system('pip install -U discord==1.7.3')
+os.system('pip install -U discord.py==1.7.3')
+
+token = "MTAzODY3NjI2MTc1MDQ1MjMyNQ.GTCFHk.EftHmPUkTnIStH_Ydogae4F_aeRUg-sOZ-6E5c" #TokenIdYour
+replyMessage = 'Hallo guy'
+channelId = 1027161980970205225 #channeild
+delay = 120
+
+# Danh sách tin nhắn
+mainMessages = [
+    "momentum stand out in the DeFi space, keep building community guys",
+    "feel happy today hehe"
+    "momentum empowers all participants in the ecosystem equally",
+    "It is great to see liquidity providers being rewarded 100 percent",
+    "good day guys! do I miss any big news today? :D",
+    "i staked 10 sui on the platform and am earning every day",
+    "today's target is probably 2 to 3 more levels",
+    "today my hands are tired from chatting",
+    "make some noise everyone",
+    "great for tonight",
+    "let keep the energy up today",
+    "momentum is growing fast, love to see it",
+    "i m here for the long run",
+    "chilling and checking the charts",
+    "the project is awesome, i think there will be a lot of interesting things",
+    "happy sunday everyone",
+    "i fully support Momentum and its fair reward distribution model",
+    "a project that gives back to users deserves recognition",
+    "Momentum's token emission model is both innovative and fair",
+    "just claimed my rewards, feeling good",
+    "I believe Momentum will attract deep liquidity with this system",
+    "The low slippage makes trading on Momentum efficient and smooth",
+    "Momentum is truly user-focused and community-driven",
+    "This is the kind of project DeFi needs more of",
+    "Fair incentives lead to long-term sustainability, and Momentum gets it right",
+    "I trust a platform that shares all its value with its users",
+    "Momentum has created a win-win model for everyone involved",
+    "The more I learn about Momentum, the more I believe in its vision",
+    "Giving 100 percent of fees and emissions back to the community is powerful",
+    "Momentum shows how DeFi can be both fair and effective",
+    "this project is built on transparency and fairness",
+    "i excited to see how far Momentum will go with its strong foundation",
+    "liquidity providers finally get the value they deserve",
+    "momentum offers a new standard for equitable token distribution",
+    "with this kind of model, user loyalty will naturally grow",
+    "momentum aligns incentives in a way that just makes sense",
+    "it's encouraging to see a project that puts traders and LPs first",
+    "the economic model behind Momentum is both smart and sustainable",
+    "momentum proves that fairness can drive innovation",
+    "i support any project that rewards participation so directly",
+    "momentum ecosystem benefits everyone, not just a few",
+    "I appreciate the transparency in Momentum reward structure",
+    "Momentum creates real value for real users",
+    "The project has a clear path to attract and retain liquidity",
+    "Momentum is solving core problems in the DeFi landscape",
+    "i have full confidence in the long-term potential of Momentum",
+    "The model encourages active participation and long-term growth",
+    "momentum gives liquidity providers more reason to stay",
+    "with low trading fees and fair emissions, everyone wins",
+    "The ve(3,3) system is implemented perfectly in momentum",
+    "a project with aligned incentives will always have strong community support",
+    "mmentum's commitment to fairness is refreshing",
+    "I believe this model will become a blueprint for future DeFi projects",
+    "The feedback loop in momentum design is truly effective",
+    "mmomentum bridges the gap between fair distribution and real utility",
+    "It is rare to see a DeFi platform so focused on user benefit",
+    "I support Momentum because it values its users",
+    "The economic incentives are clear and balanced",
+    "Momentum is designed with sustainability at its core",
+    "Rewarding traders and LPs equally creates a healthy market",
+    "Momentum is changing how value is shared in DeFi",
+    "The success of the platform will be driven by its strong fundamentals",
+    "it exciting to watch a project that puts real economics into action",
+    "I support Momentum because it puts fairness first"
+]
+
+
+# Khởi tạo client
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print(f"✅ Đã kết nối với: {client.user}")
+    
+    # Lấy kênh
+    channel = client.get_channel(CHANNEL_ID)
+    if not channel:
+        print(f"❌ Không tìm thấy kênh với ID: {CHANNEL_ID}")
+        return
+    
+    # Gửi tin nhắn
+    while True:
+        for i, msg in enumerate(mainMessages):
+            try:
+                delay_time = random.randint(80, 110)
+                await channel.send(msg)
+                print(f"✅ Đã gửi tin nhắn {i+1} , tn kế tiếp sau {delay_time}s")
+                await asyncio.sleep(delay_time)
+            except Exception as e:
+                print(f"❌ Lỗi khi gửi tin nhắn: {e}")
+                await asyncio.sleep(delay_time)
+
+@client.event
+async def on_message(message):
+    pass
+
+# Chạy client
+try:
+    client.run(TOKEN)
+except Exception as e:
+    print(f"❌ Lỗi khi khởi động: {e}")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    
