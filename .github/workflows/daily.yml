@@ -26,9 +26,9 @@ jobs:
           # Tạo file mới
           echo "Generated on $(date)" > "$new_file"
 
-          # Cấu hình Git
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Cấu hình Git với account của bạn
+          git config --global user.name "diepnhat913"
+          git config --global user.email "diepnhat913@gmail.com"
 
           # Commit & push
           git add "$new_file"
